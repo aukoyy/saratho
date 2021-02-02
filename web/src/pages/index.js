@@ -6,7 +6,6 @@ import {
   filterOutDocsPublishedInTheFuture
 } from '../lib/helpers'
 import BlogPostPreviewList from '../components/blog-post-preview-list'
-import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
@@ -95,10 +94,14 @@ const IndexPage = props => {
         description={site.description}
         keywords={site.keywords}
       />
-      <Container>
-        <h1 hidden>Welcome to main page</h1>
-
-      </Container>
+      <h1>Sara</h1>
+      <h1 hidden>Welcome to {site.title}</h1>
+      {postNodes && (
+        <BlogPostPreviewList
+          title='Latest blog posts'
+          nodes={postNodes}
+        />
+      )}
     </Layout>
   )
 }
