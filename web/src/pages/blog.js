@@ -34,7 +34,7 @@ export const query = graphql`
     }
   }
 
-  query IndexPageQuery {
+  query BlogPageQuery {
     site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
       title
       description
@@ -64,7 +64,7 @@ export const query = graphql`
   }
 `
 
-const IndexPage = props => {
+const BlogPage = props => {
   const {data, errors} = props
 
   if (errors) {
@@ -96,11 +96,17 @@ const IndexPage = props => {
         keywords={site.keywords}
       />
       <Container>
-        <h1 hidden>Welcome to main page</h1>
-
+        <h1 hidden>Welcome to {site.title}</h1>
+        {postNodes && (
+          <BlogPostPreviewList
+            title='Latest blog posts'
+            nodes={postNodes}
+            browseMoreHref='/archive/'
+          />
+        )}
       </Container>
     </Layout>
   )
 }
 
-export default IndexPage
+export default BlogPage
