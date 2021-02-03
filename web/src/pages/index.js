@@ -94,14 +94,20 @@ const IndexPage = props => {
         description={site.description}
         keywords={site.keywords}
       />
-      <h1>Sara</h1>
-      <h1 hidden>Welcome to {site.title}</h1>
-      {postNodes && (
-        <BlogPostPreviewList
-          title='Latest blog posts'
-          nodes={postNodes}
-        />
-      )}
+      <div className='flex justify-center py-32'>
+        <h1 className='text-6xl'>Sara</h1>
+      </div>
+
+      <div className='flex justify-center'>
+        <div className='w-2/3'>
+          {postNodes && (
+            <BlogPostPreviewList
+              nodes={postNodes}
+            />
+          )}
+        </div>
+      </div>
+
     </Layout>
   )
 }
