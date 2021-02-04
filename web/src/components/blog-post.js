@@ -30,7 +30,7 @@ function BlogPost (props) {
 
         </div>
 
-        <div className='w-1/2 lg:w2/3 object-cover'>
+        <div className='w-1/2 lg:w-2/3 object-cover'>
           {mainImage && mainImage.asset && (
             <img
               src={imageUrlFor(buildImageObj(mainImage))
