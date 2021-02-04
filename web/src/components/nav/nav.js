@@ -11,7 +11,7 @@ const Nav = ({onHideNav, onShowNav, showNav}) => (
       </button>
 
       <nav className='flex justify-center'>
-        <ul className='flex p-6 border-pink-400 border-8'>
+        <ul className='flex justify-around w-1/3 p-6 border-pink-400 border-8'>
           <NavListItem
             link='/'
             text='Home'

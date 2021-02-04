@@ -99,7 +99,7 @@ const IndexPage = props => {
       </div>
 
       <div className='flex justify-center'>
-        <div className='w-2/3'>
+        <div className='w-1/3'>
           {postNodes && (
             <BlogPostPreviewList
               nodes={postNodes}
