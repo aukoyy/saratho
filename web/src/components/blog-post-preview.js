@@ -9,7 +9,7 @@ function BlogPostPreview (props) {
   return (
     <Link
       to={getBlogUrl(props.publishedAt, props.slug.current)}
-      className='flex my-20'
+      className='flex my-20 p-2 shadow-md rounded-md'
     >
       <div className='w-1/2'>
         {props.mainImage && props.mainImage.asset && (

@@ -3,7 +3,7 @@ import Nav from './nav/nav'
 
 const Layout = ({children, onHideNav, onShowNav, showNav}) => (
   <div className='flex justify-center'>
-    <div className='md:w-1/2 xl:w-1/3'>
+    <div className='md:w-2/3 xl:w-1/2'>
       <Nav onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} />
       <div>{children}</div>
       <footer>
