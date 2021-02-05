@@ -20,10 +20,10 @@ const Nav = ({onHideNav, onShowNav, showNav}) => (
           link='/blog/'
           text='Blog'
         />
-        <NavListItem
+        {/* <NavListItem
           link='/shop/'
           text='Shop'
-        />
+        /> */}
         <NavListItem
           link='/about/'
           text='About'
